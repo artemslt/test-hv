@@ -1,0 +1,8 @@
+@import "../../../../styles/mixins";
+
+.list {
+    @include desktop {
+        width: 789px;
+        margin: 0 auto;
+    }
+}

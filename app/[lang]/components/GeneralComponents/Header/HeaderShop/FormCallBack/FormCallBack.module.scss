@@ -1,0 +1,123 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+
+.modalForm {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    padding: 20px 16px;
+    background-color: $color-white;
+    transition: transform $transition;
+    transform: translateX(-100%);
+    &.isShow {
+        transform: translateX(0);
+        overflow-y: auto;
+    }
+    &.isClose {
+        transform: translateX(-100%);
+    }
+    @include tablet {
+        width: 368px;
+        padding: 30px 24px;
+    }
+    @include desktop {
+        position: relative;
+        overflow-y: hidden;
+        width: 540px;
+        height: 569px;
+        margin-top: 120px;
+        padding: 30px;
+        border-radius: 16px;
+    }
+}
+
+.modalForm__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    @include tablet {
+        margin-bottom: 40px;
+    }
+    @include desktop {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+}
+
+.close {
+    width: 28px;
+    height: 28px;
+    stroke: $color-grey;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+    @include desktop {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+.switcher {
+    @include desktop {
+        display: none;
+    }
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.text {
+    margin-bottom: 24px;
+    @include tablet {
+        margin-bottom: 48px;
+    }
+    @include desktop {
+        width: 400px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+.form {
+    @include desktop {
+        width: 320px;
+    }
+}
+
+.label {
+    margin-top: 20px;
+    @include tablet {
+        margin-top: 24px;
+    }
+}
+
+.input {
+    width: 100%;
+}
+
+.btn {
+    margin-top: 36px;
+}
+
+.error {
+    position: absolute;
+    width: 208px;
+    color: $color-red;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.21;
+    text-align: right;
+    @include tablet {
+        width: 320px;
+    }
+}

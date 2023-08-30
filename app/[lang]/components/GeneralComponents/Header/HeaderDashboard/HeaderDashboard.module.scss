@@ -1,0 +1,52 @@
+@import "../../../../../styles/variables";
+.header {
+    padding-top: 3px;
+    padding-bottom: 6px;
+    background-color: $color-black;
+}
+
+.wrapper {
+    position: relative;
+    color: $color-white;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 76px;
+}
+
+.header__menu {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header__logo {
+    position: absolute;
+    top: 3px;
+    left: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__text {
+    margin-top: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.exit {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    border: none;
+    background-color: transparent;
+}

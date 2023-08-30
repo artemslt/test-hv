@@ -1,0 +1,85 @@
+@import "../../../../styles/variables";
+@import "../../../../styles//mixins";
+
+.slider {
+    margin-top: 56px;
+    @include tablet {
+        margin-top: 64px;
+    }
+    @include desktop {
+        margin-top: 72px;
+        padding-bottom: 92px;
+    }
+}
+
+.slider__wrapper {
+    @include tablet {
+        height: 413px;
+    }
+    @include desktop {
+        height: 420px;
+    }
+}
+
+.slider__title {
+    margin-bottom: 20px;
+    @include tablet {
+        text-align: center;
+    }
+    @include desktop {
+        margin-bottom: 30px;
+    }
+}
+
+.nextArrow,
+.prevArrow {
+    cursor: pointer;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    background-size: 28px;
+}
+.nextArrow {
+    @include desktop {
+        top: 447px;
+        left: 723px;
+        background: url("../../../../../public/images/common/ArrowNext.svg")
+            center no-repeat;
+        &:hover,
+        &:focus {
+            background: url("../../../../../public/images/common/ArrowNext.svg")
+                center no-repeat;
+            background-color: $color-light-grey;
+            transition: $transition;
+        }
+    }
+}
+
+.prevArrow {
+    @include desktop {
+        top: 447px;
+        left: 441px;
+        background: url("../../../../../public/images/common/ArrowPrev.svg")
+            center no-repeat;
+        &:hover,
+        &:focus {
+            background: url("../../../../../public/images/common/ArrowPrev.svg")
+                center no-repeat;
+            background-color: $color-light-grey;
+            transition: $transition;
+        }
+    }
+}
+
+.without__slider {
+    display: flex;
+    gap: 6px;
+
+    @include tablet {
+        gap: 33px;
+    }
+    @include desktop {
+        gap: 14px;
+    }
+}

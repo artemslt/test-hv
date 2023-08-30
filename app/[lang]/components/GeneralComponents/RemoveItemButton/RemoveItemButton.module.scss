@@ -1,0 +1,25 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.button {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: $color-grey;
+    transition: color $transition;
+    @include tablet {
+        width: 36px;
+        height: 36px;
+    }
+    @include desktop {
+        width: 32px;
+        height: 32px;
+        &:hover,
+        &:focus-visible {
+            color: $color-red;
+        }
+    }
+}

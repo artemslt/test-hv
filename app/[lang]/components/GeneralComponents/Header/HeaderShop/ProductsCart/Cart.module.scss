@@ -1,0 +1,31 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+.cart {
+    position: relative;
+}
+
+.inCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    color: $color-black;
+    background-color: $color-orange;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: normal;
+    @include tablet {
+        padding: 0 5px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    @include desktop {
+        font-size: 14px;
+        right: 0;
+       
+    }
+}

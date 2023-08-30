@@ -1,0 +1,26 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.back {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    transition: color $transition;
+    &:hover,
+    &:focus {
+        color: $color-orange;
+    }
+    @include tablet {
+        width: 48px;
+        height: 48px;
+        top: 16px;
+    }
+    @include desktop {
+        top: 28px;
+    }
+}

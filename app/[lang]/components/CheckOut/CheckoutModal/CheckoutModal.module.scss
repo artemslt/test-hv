@@ -1,0 +1,38 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.title {
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+
+    @include tablet {
+        margin-bottom: 36px;
+        font-size: 24px;
+    }
+    @include desktop {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+}
+
+.text {
+    margin-bottom: 56px;
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+    @include tablet {
+        margin-bottom: 72px;
+    }
+}
+
+.button__wrapper {
+    width: 220px;
+
+    @include tablet {
+        width: 320px;
+    }
+}

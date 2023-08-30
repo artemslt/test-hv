@@ -1,0 +1,11 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+.categories {
+    color: $color-white;
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 480px;
+    }
+}

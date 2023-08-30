@@ -1,0 +1,63 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 100px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-grey;
+        border-radius: 5px;
+    }
+}
+.slider__image {
+    @include tablet {
+        position: relative;
+
+        width: 720px;
+        height: 720px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    @include desktop {
+        width: 596px;
+        height: 596px;
+    }
+}
+
+.slider__wrapper {
+    @include tablet {
+        position: relative;
+
+        padding-top: 30px;
+        border-radius: 5px;
+        width: 720px;
+    }
+    @include desktop {
+        width: 596px;
+        padding-top: 28px;
+    }
+}
+
+.button__close {
+    background-color: $color-light-grey !important;
+    border-radius: 5px;
+    color: $color-black !important;
+    margin-bottom: 50px;
+    margin-left: 680px;
+    &:hover,
+    &:focus-visible {
+        background-color: $color-grey !important;
+    }
+    @include desktop {
+        margin-left: 854px;
+        margin-bottom: 48px;
+    }
+}

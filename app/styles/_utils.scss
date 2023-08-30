@@ -1,0 +1,436 @@
+@import "./mixins";
+
+.container {
+    margin: 0 auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    max-width: $mobile;
+
+    @include tablet {
+        padding-left: 24px;
+        padding-right: 24px;
+        max-width: $tablet;
+    }
+
+    @include desktop {
+        padding-left: 32px;
+        padding-right: 32px;
+        max-width: $desktop;
+    }
+}
+
+.section {
+    padding-top: 52px;
+    padding-bottom: 100px;
+    position: relative;
+    @include tablet {
+        padding-top: 64px;
+    }
+    @include desktop {
+        padding-top: 52px;
+        padding-bottom: 120px;
+    }
+}
+
+.title--secondary {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    @include tablet {
+        margin-bottom: 36px;
+        font-size: 28px;
+    }
+    @include desktop {
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+}
+
+.title--third {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    @include tablet {
+        font-size: 24px;
+    }
+    @include desktop {
+        font-size: 28px;
+    }
+}
+
+.text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.19;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        font-size: 20px;
+    }
+}
+
+.text--secondary {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: $color-black;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+.text--form {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.21;
+    color: $color-black;
+    @include tablet {
+        font-size: 18px;
+    }
+}
+
+.text--grey {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: $color-grey;
+}
+
+.button {
+    position: relative;
+    &:not([disabled]) {
+        cursor: pointer;
+    }
+    width: 100%;
+    height: 44px;
+    background-color: $color-orange;
+    border-color: transparent;
+    border-radius: 3px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    transition: color $transition, background-color $transition;
+    @include tablet {
+        height: 57px;
+        font-size: 20px;
+    }
+    @include desktop {
+        height: 56px;
+        border-radius: 4px;
+        font-weight: 600;
+        &:hover,
+        &:focus-visible {
+            color: $color-white;
+            background-color: $color-black;
+        }
+    }
+    &:disabled {
+        color: $color-white;
+        background-color: $color-grey;
+    }
+}
+.button__showMore {
+    cursor: pointer;
+    display: block;
+    margin: 28px auto 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.23;
+    transition: border $transition;
+    @include tablet {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    @include desktop {
+        margin-top: 24px;
+        font-weight: 600;
+        &:hover,
+        &:focus-visible {
+            border-bottom: 2px solid $color-orange;
+        }
+    }
+}
+.button__text {
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid $color-black;
+    transition: border $transition;
+    @include desktop {
+        margin-top: 36px;
+        font-weight: 600;
+        font-size: 20px;
+        border-bottom: 2px solid transparent;
+        &:hover,
+        &:focus-visible {
+            border-bottom: 2px solid $color-orange;
+        }
+    }
+}
+
+.spinner {
+    margin: 0 auto;
+    width: 64px; /* the size */
+    padding: 7px; /* the border thickness */
+    background: $color-orange; /* the color */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    --_m: conic-gradient(#0000, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    box-sizing: border-box;
+    animation: load 1s linear infinite;
+}
+@keyframes load {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+.spinner--white {
+    position: absolute;
+    top: 7px;
+    right: 16px;
+    margin: 0 auto;
+    width: 28px; /* the size */
+    padding: 3px; /* the border thickness */
+    background: $color-white; /* the color */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    --_m: conic-gradient(#0000, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    box-sizing: border-box;
+    animation: load 1s linear infinite;
+    @include desktop {
+        top: 12px;
+        right: 14px;
+    }
+}
+@keyframes load {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+.notification {
+    position: fixed;
+    bottom: 8px;
+    left: calc((100% - 304px) / 2);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 304px;
+    height: 51px;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-white;
+    background-color: $color-grey;
+    opacity: 0.95;
+    @include tablet {
+        width: 720px;
+        height: 64px;
+        bottom: 24px;
+        left: calc((100% - 720px) / 2);
+        font-size: 20px;
+    }
+    @include desktop {
+        width: 802px;
+        bottom: 32px;
+        left: calc((100% - 802px) / 2);
+        font-weight: 600;
+    }
+}
+
+// general form styles
+.input {
+    position: relative;
+    width: 100%;
+    height: 43px;
+    padding: 12px;
+    outline: none;
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+    appearance: none;
+    background-color: none;
+    font-family: $font;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.21;
+    transition: color $transition, border-color $transition;
+
+    &:hover,
+    &:focus {
+        border-color: $color-black;
+        color: $color-black;
+    }
+
+    &::placeholder {
+        color: $color-grey;
+    }
+
+    @include tablet {
+        height: 46px;
+        font-size: 18px;
+    }
+
+    @include desktop {
+        height: 48px;
+    }
+}
+
+.error__message {
+    position: absolute;
+    width: 100%;
+    color: $color-red;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.21;
+    text-align: right;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    color: $color-black;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        font-weight: 600;
+    }
+}
+.textarea {
+    width: 304px;
+    height: 100px;
+    outline: none;
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: none;
+    line-height: 1.21;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $font;
+    resize: none;
+    transition: color $transition, border-color $transition;
+
+    &:hover,
+    &:focus {
+        border-color: $color-black;
+        color: $color-black;
+    }
+    &::placeholder {
+        color: $color-grey;
+    }
+
+    @include tablet {
+        width: 320px;
+        height: 120px;
+        font-size: 18px;
+    }
+    @include desktop {
+        height: 180px;
+    }
+}
+
+.input--error {
+    border-color: $color-red;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid $color-black;
+}
+
+.form__checkbox:checked + .checkbox {
+    background-color: $color-black;
+    border-color: $color-black;
+    background-image: url(../../public/images/checked.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.authForm__wrapper {
+    @include tablet {
+        width: 400px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 38px;
+        border: 2px solid $color-light-grey;
+        border-radius: 16px;
+    }
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    margin-top: 120px;
+    padding: 56px 22px 60px;
+    border-radius: 5px;
+    background-color: $color-white;
+    text-align: center;
+    @include tablet {
+        width: 470px;
+        margin-top: 180px;
+        padding: 80px 75px 56px;
+        border-radius: 16px;
+    }
+    @include desktop {
+        width: 540px;
+        margin-top: 120px;
+        padding: 72px 30px 56px;
+        border-radius: 16px;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

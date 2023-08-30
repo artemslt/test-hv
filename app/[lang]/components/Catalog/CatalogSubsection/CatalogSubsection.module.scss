@@ -1,0 +1,20 @@
+@import "../../../../styles/mixins";
+
+.section {
+    padding-bottom: 56px;
+    @include tablet {
+        padding-bottom: 65px;
+    }
+    @include desktop {
+        padding-bottom: 52px;
+    }
+}
+.title {
+    margin-bottom: 16px;
+    @include tablet {
+        margin-bottom: 20px;
+    }
+}
+.noProducts {
+    padding-top: 32px;
+}

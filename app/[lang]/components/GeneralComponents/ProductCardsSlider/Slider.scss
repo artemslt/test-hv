@@ -1,0 +1,118 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.slick-track {
+    width: 304px;
+    height: 288px;
+    @include tablet {
+        width: 720px;
+        height: 413px;
+    }
+    @include desktop {
+        width: 1216px;
+        height: 420px;
+    }
+}
+
+.slick-list {
+    width: 304px;
+    @include tablet {
+        width: 720px;
+    }
+    @include desktop {
+        width: 1216px;
+    }
+}
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+    display: none;
+    @include desktop {
+        color: $color-black;
+    }
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+    display: none;
+    @include desktop {
+        color: $color-black;
+    }
+}
+
+.slick-next {
+    right: 0;
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+
+.slick-prev {
+    left: 0px;
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+
+.slick-slide {
+    min-width: 152px;
+    padding: 0 3px;
+    @include tablet {
+        min-width: 219px;
+        padding: 0 10.5px;
+    }
+    @include desktop {
+        width: 200px;
+        padding: 0 7px;
+    }
+}
+
+.slick-dots {
+    height: 10px;
+    bottom: -30px;
+    @include tablet {
+        height: 12px;
+    }
+    @include tablet {
+        bottom: -54px;
+    }
+}
+
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+    @include tablet {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.slick-dots li.slick-active {
+    color: var(--color-orange);
+}
+
+.slick-dots li button:before {
+    background-color: var(--color-grey);
+    border-radius: 50%;
+    opacity: 1;
+    height: 10px;
+    width: 10px;
+    content: " ";
+    @include tablet {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.slick-dots li.slick-active button:before {
+    content: " ";
+    background-color: var(--color-orange);
+    opacity: 1;
+    height: 10px;
+    width: 10px;
+    @include tablet {
+        width: 12px;
+        height: 12px;
+    }
+}

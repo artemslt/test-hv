@@ -1,0 +1,10 @@
+@import "../../../../styles/mixins";
+
+.wrapper {
+    width: 219px;
+    margin-top: 73px;
+    @include desktop {
+        width: 320px;
+        margin-top: 136px;
+    }
+}

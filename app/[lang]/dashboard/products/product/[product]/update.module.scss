@@ -1,0 +1,32 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+
+.button__wrapper {
+    text-align: center;
+}
+.button_cancel {
+    cursor: pointer;
+    margin: 20px auto 62px auto;
+    padding: 0;
+    height: 19px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.23px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $color-black;
+    transition: border-bottom $transition;
+    @include desktop {
+        border: none;
+        height: 26px;
+        margin-top: 36px;
+        font-size: 20px;
+        font-weight: 600;
+        &:hover,
+        &:focus-visible {
+            border-bottom: 2px solid $color-orange;
+        }
+    }
+}

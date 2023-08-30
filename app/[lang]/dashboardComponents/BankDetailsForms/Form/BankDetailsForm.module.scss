@@ -1,0 +1,99 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.form__wrapper {
+    width: 304px;
+    margin: 0 auto 36px;
+
+    @include tablet {
+        width: 400px;
+    }
+}
+.label__wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    @include tablet {
+        margin-bottom: 20px;
+    }
+}
+
+.label {
+    position: relative;
+}
+
+.error {
+    bottom: -30px;
+}
+.checkbox_description {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.21;
+
+    @include tablet {
+        font-size: 28px;
+    }
+}
+
+.input__description {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.21;
+    color: $color-black;
+
+    @include tablet {
+        font-size: 18px;
+    }
+}
+
+.iban__input {
+    padding-left: 2px;
+}
+
+.monoLink {
+    width: 304px;
+    height: 80px;
+    outline: none;
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: none;
+    line-height: 1.21;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $font;
+    resize: none;
+
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-grey;
+        border-radius: 5px;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $color-black;
+        color: $color-black;
+    }
+    &::placeholder {
+        color: $color-grey;
+    }
+
+    @include tablet {
+        width: 384px;
+        font-size: 18px;
+    }
+
+    @include desktop {
+        font-size: 20px;
+    }
+}
+
+.button {
+    margin-top: 36px;
+}

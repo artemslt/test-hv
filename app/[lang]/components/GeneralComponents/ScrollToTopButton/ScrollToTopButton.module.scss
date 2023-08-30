@@ -1,0 +1,32 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 9px;
+    right: calc((100% - $mobile) / 2 + 8px);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    @include tablet {
+        right: calc((100% - $tablet) / 2 + 20px);
+        width: 68px;
+        height: 68px;
+        border: 4px solid transparent;
+    }
+    @include desktop {
+        right: calc((100% - $desktop) / 2 + 28px);
+        width: 82px;
+        height: 82px;
+    }
+}
+.button_accent {
+    border: 2px solid $color-white;
+    @include tablet {
+        border: 4px solid $color-white;
+    }
+}

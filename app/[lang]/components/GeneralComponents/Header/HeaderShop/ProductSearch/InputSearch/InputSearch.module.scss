@@ -1,0 +1,103 @@
+@import "../../../../../../../styles/variables";
+@import "../../../../../../../styles/mixins";
+
+.search {
+    position: relative;
+    display: flex;
+    padding: 28px 8px;
+    border-bottom: 1px solid $color-grey;
+    @include tablet {
+        padding: 28px 24px;
+    }
+    @include desktop {
+        height: 44px;
+        padding: 0;
+        border: none;
+    }
+}
+.search__form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include desktop {
+        width: 360px;
+    }
+}
+
+.search__icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    fill: $color-grey;
+    @include tablet {
+        width: 48px;
+        height: 48px;
+    }
+    @include desktop {
+        &.show {
+            display: block;
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            width: 28px;
+            height: 28px;
+            margin: 0;
+        }
+
+        &.doNotShow {
+            display: none;
+        }
+    }
+}
+
+.search__input {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: $color-black;
+    background-color: none;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        width: 360px;
+        padding: 12px;
+        border-radius: 5px;
+        border: 2px solid $color-grey;
+        font-size: 20px;
+        background-color: $color-white;
+        transition: border-color $transition;
+        &:hover {
+            border-color: $color-orange;
+        }
+    }
+}
+
+.search__close {
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+    @include desktop {
+        &.show {
+            display: block;
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            width: 28px;
+            height: 28px;
+        }
+        &.doNotShow {
+            display: none;
+        }
+    }
+}

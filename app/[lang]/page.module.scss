@@ -1,0 +1,216 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.home {
+    @include desktop {
+        padding-top: 34px;
+    }
+}
+
+.hero {
+    @include desktop {
+        position: relative;
+        height: 691px;
+        padding: 46px 667px 44px 103px;
+
+        height: 621px;
+        background: linear-gradient(
+                0deg,
+                rgba(43, 43, 43, 0.2) 69.72%,
+                #2b2b2b 100%
+            ),
+            url("../../public/images/hero_desktop_1x.jpg"), lightgray 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+.home__container {
+    @include tablet {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    @include desktop {
+        flex-direction: column;
+    }
+}
+.home__image {
+    display: flex;
+    align-items: flex-end;
+    width: 304px;
+    height: 240px;
+    margin-bottom: 24px;
+    padding: 208px 91px 8px 8px;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 57.22%),
+        url("../../public/images/hero_1x.jpg"), lightgray 50% / cover no-repeat;
+
+    background-position: center;
+    background-color: $color-imgThumb;
+    border-radius: 5px;
+
+    @include tablet {
+        width: 344px;
+        height: 313px;
+        margin-left: 32px;
+        margin-bottom: 0;
+        padding: 263px 28px 16px 28px;
+        background-size: 344px 313px;
+    }
+    @include desktop {
+        width: 410px;
+        height: 48px;
+        margin-left: 0;
+        margin-bottom: 20px;
+
+        padding: 0;
+        background: none;
+    }
+}
+
+.home__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $color-white;
+    @include tablet {
+        font-size: 28px;
+    }
+    @include desktop {
+        font-size: 32px;
+    }
+}
+
+.home__about {
+    @include tablet {
+        width: 344px;
+    }
+    @include desktop {
+        width: 444px;
+        height: 463px;
+        padding: 32px;
+        border-radius: 8px;
+        background-color: $color-white;
+    }
+}
+
+.home__aboutText {
+    @include tablet {
+        height: 220px;
+    }
+    @include desktop {
+        height: 240px;
+    }
+}
+
+.wrapper {
+    @include desktop {
+        background: url("../../public/images/honeybee_home_page.svg");
+        background-repeat: no-repeat;
+        background-position: 1021px 270px;
+    }
+}
+
+.home__team {
+    @include tablet {
+        display: flex;
+        padding-top: 64px;
+    }
+    @include desktop {
+        padding-top: 72px;
+    }
+}
+.home__seconderyTitle {
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    @include tablet {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    @include desktop {
+        font-size: 32px;
+    }
+}
+
+.home__text {
+    @include tablet {
+        width: 344px;
+    }
+    @include desktop {
+        width: 493px;
+    }
+}
+
+.home__teamPhoto {
+    margin-top: 56px;
+    margin-bottom: 20px;
+    background-color: $color-imgThumb;
+    border-radius: 5px;
+    width: 304px;
+    height: 181px;
+    background-image: url("../../public/images/home_photo_1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include tablet {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 32px;
+        width: 344px;
+        height: 183px;
+    }
+    @include desktop {
+        margin-right: 24px;
+        width: 596px;
+        height: 355px;
+        background-image: url("../../public/images/home_photo_desktop.jpg");
+    }
+}
+
+.home__new {
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    @include tablet {
+        text-align: center;
+        margin-top: 64px;
+        font-size: 24px;
+    }
+}
+.home__link {
+    height: 44px;
+    @include tablet {
+        height: 57px;
+    }
+    @include desktop {
+        height: 56px;
+    }
+}
+
+.home__button__mobile {
+    margin-top: 36px;
+    @include tablet {
+        display: none;
+    }
+}
+
+.home__button__tabletAndDesktop {
+    display: none;
+    @include tablet {
+        display: block;
+        margin-top: 40px;
+    }
+}
+
+.home__slider {
+    width: 304px;
+    height: 288px;
+    @include tablet {
+        width: 720px;
+        height: 413px;
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../../../styles/mixins";
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    @include tablet {
+        gap: 32px;
+    }
+    @include desktop {
+        gap: 48px;
+    }
+}

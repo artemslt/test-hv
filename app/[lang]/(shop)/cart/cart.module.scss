@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+
+.section {
+    position: relative;
+}
+.cart__wrapper {
+    width: 304px;
+    margin: 0 auto;
+    @include tablet {
+        width: 470px;
+    }
+    @include desktop {
+        width: 996px;
+    }
+}
+.button__wrapper {
+    @include desktop {
+        width: 470px;
+        margin: 0 auto;
+    }
+}

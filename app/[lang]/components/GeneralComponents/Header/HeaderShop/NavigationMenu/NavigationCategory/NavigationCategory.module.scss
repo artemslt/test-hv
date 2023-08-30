@@ -1,0 +1,21 @@
+@import "../../../../../../../styles/variables";
+@import "../../../../../../../styles/mixins";
+.link {
+    cursor: pointer;
+    margin-bottom: 22px;
+    margin-left: 32px;
+    color: $color-black;
+    transition: color $transition;
+    &:hover,
+    &:focus {
+        color: $color-orange;
+    }
+    @include tablet {
+        margin-bottom: 24px;
+        margin-left: 48px;
+    }
+    @include desktop {
+        color: $color-white;
+        margin: 0;
+    }
+}

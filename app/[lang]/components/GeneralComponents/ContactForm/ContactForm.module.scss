@@ -1,0 +1,48 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.label__wrapper {
+    position: relative;
+}
+.inputs__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 36px;
+
+    @include tablet {
+        gap: 28px;
+        margin-bottom: 28px;
+    }
+    @include desktop {
+        margin-bottom: 36px;
+    }
+}
+
+.checkbox_label__wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.accepted_data__wrapper {
+    display: flex;
+}
+
+.checkbox_description {
+    font-size: 11px;
+    font-weight: 300;
+
+    @include tablet {
+        font-size: 12px;
+    }
+}
+
+.checkbox_link {
+    display: inline-block;
+    font-size: 11px;
+    color: $color-orange;
+
+    @include tablet {
+        font-size: 12px;
+    }
+}

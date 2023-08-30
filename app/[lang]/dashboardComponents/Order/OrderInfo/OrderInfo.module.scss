@@ -1,0 +1,73 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    min-height: 283px;
+    margin-bottom: 33px;
+    padding: 12px 10px;
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+    @include desktop {
+        width: 560px;
+        min-height: 253px;
+        padding: 24px;
+        margin: 0;
+        border: 2px solid $color-light-grey;
+        border-radius: 8px;
+    }
+}
+.info {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.21;
+    @include desktop {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
+
+.info__value {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.21;
+    @include desktop {
+        font-size: 18px;
+    }
+}
+.comment__wrapper {
+    @include desktop {
+       width: 486px;
+    }
+}
+.button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-top: auto;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    transition: color $transition;
+    @include desktop {
+        bottom: 24px;
+        right: 24px;
+        width: 28px;
+        height: 28px;
+        &:hover,
+        &:focus-visible {
+            color: $color-orange;
+        }
+    }
+}

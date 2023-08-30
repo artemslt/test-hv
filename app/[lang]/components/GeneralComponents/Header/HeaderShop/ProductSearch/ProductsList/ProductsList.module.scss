@@ -1,0 +1,53 @@
+@import "../../../../../../../styles/variables";
+@import "../../../../../../../styles/mixins";
+
+.popUp {
+    @include desktop {
+        z-index: 1;
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 360px;
+        height: 352px;
+        padding: 8px;
+        border-radius: 6px;
+        border: 2px solid $color-grey;
+        background-color: $color-white;
+        transition: display $transition;
+
+        &.isOpen {
+            display: block;
+        }
+    }
+}
+
+.searchProducts {
+    padding: 24px 8px;
+    @include tablet {
+        padding: 32px 24px;
+    }
+    @include desktop {
+        padding: 0;
+    }
+}
+
+.product {
+    margin-bottom: 20px;
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+    @include tablet {
+        margin-bottom: 28px;
+    }
+    @include desktop {
+        margin-bottom: 12px;
+    }
+}
+
+.noproducts {
+    margin-top: 56px;
+    @include tablet {
+        margin-top: 64px;
+    }
+}

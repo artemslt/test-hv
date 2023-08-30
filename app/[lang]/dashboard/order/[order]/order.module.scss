@@ -1,0 +1,60 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.wrapper {
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 42px;
+    }
+}
+
+.productsList {
+    @include desktop {
+        width: 1216px;
+        order: 3;
+        padding: 30px 38px 38px;
+        border: 2px solid $color-light-grey;
+        border-radius: 8px;
+    }
+}
+.productsList__title {
+    @include desktop {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+.controlPanel {
+    @include desktop {
+        order: 2;
+        width: 560px;
+    }
+}
+.buttons__wrapper {
+    @include tablet {
+        width: 380px;
+        margin: 40px auto 0;
+    }
+}
+.button_save {
+    cursor: pointer;
+    display: block;
+    margin: 21px auto 0 auto;
+    padding: 0;
+    background-color: transparent;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid $color-black;
+    transition: border $transition;
+    @include desktop {
+        margin-top: 36px;
+        font-size: 20px;
+        border-bottom: 2px solid transparent;
+        &:hover,
+        &:focus-visible {
+            border-bottom: 2px solid $color-orange;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.form {
+    position: relative;
+    display: grid;
+    gap: 19px;
+    @include desktop {
+        gap: 28px;
+        max-width: 854px;
+        margin: 0 auto;
+        padding: 60px 60px 60px 60px;
+        border-radius: 16px;
+        border: 2px solid $color-light-grey;
+    }
+}
+
+.form__button {
+    max-width: 380px;
+    margin: 0 auto;
+}
+.inputs__colomn {
+    display: grid;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 94px;
+    }
+}
+.inputs__inline {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    @include tablet {
+        column-gap: 94px;
+    }
+}
+
+.label__wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.error {
+    top: 10px;
+
+    @include tablet {
+        top: auto;
+    }
+}
+
+.error__wrapper {
+    position: relative;
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    @include tablet {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.desktop__none {
+    @include tablet {
+        display: none;
+    }
+}
+.desktop__block {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+

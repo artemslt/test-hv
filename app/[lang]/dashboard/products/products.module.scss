@@ -1,0 +1,15 @@
+@import "../../../styles/mixins";
+
+.search__wrapper {
+    @include tablet {
+        width: 360px;
+        margin: 0 auto 40px;
+    }
+}
+
+.noProducts {
+    margin-top: 20px;
+    @include tablet {
+        margin-top: 40px;
+    }
+}

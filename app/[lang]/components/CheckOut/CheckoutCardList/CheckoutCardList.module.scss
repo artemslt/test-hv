@@ -1,0 +1,29 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.list {
+    margin-top: 20px;
+    margin-bottom: 56px;
+
+    @include tablet {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        max-height: 651px;
+        width: 361px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 100px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-grey;
+            border-radius: 5px;
+        }
+    }
+
+    @include desktop {
+        max-height: 829px;
+        width: 564px;
+    }
+}

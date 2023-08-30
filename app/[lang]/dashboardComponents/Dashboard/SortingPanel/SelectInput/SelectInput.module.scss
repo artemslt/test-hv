@@ -1,0 +1,82 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.select {
+    cursor: pointer;
+    position: relative;
+    width: 145px;
+    height: 35px;
+    padding: 8px;
+    outline: none;
+    color: $color-black;
+    border: 1px solid $color-grey;
+    border-radius: 5px 5px 5px 5px;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.21;
+    @include desktop {
+        width: 163px;
+        height: 48px;
+        padding: 13px 8px;
+        font-size: 18px;
+    }
+}
+
+.select_opened {
+    color: $color-grey;
+    border: 1px solid $color-black;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.options__wrapper {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 145px;
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+    @include desktop {
+        left: -0.5;
+        width: 163px;
+    }
+}
+
+.option {
+    cursor: pointer;
+    padding: 5px 15px;
+    color: $color-black;
+    @include desktop {
+        padding: 12px;
+    }
+    &:hover,
+    &:focus {
+        background-color: $color-orange;
+        border-radius: 5px;
+    }
+}
+
+.button {
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: $color-black;
+    transition: color $transition;
+    @include tablet {
+        width: 22px;
+        height: 22px;
+        padding: 2px;
+    }
+}

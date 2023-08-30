@@ -1,0 +1,82 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.bank__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    & > li {
+        cursor: pointer;
+    }
+}
+
+.account {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.21;
+    color: $color-grey;
+    margin-top: 8px;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        font-size: 20px;
+    }
+}
+
+.bank__link {
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.21;
+    color: $color-grey;
+    margin-top: 8px;
+}
+
+.bank__link::after {
+    content: " ";
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: $color-grey;
+    width: 100%;
+}
+
+.bank__info {
+    display: flex;
+    align-items: center;
+
+    &:hover .icon__wrapper {
+        color: $color-orange;
+    }
+}
+
+.bank__name {
+    margin-right: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.21;
+
+    @include tablet {
+        font-size: 20px;
+    }
+    @include desktop {
+        font-size: 24px;
+    }
+}
+
+.icon__wrapper {
+    color: $color-grey;
+    width: 25px;
+    height: 24px;
+    transition: color $transition;
+
+    @include tablet {
+        width: 40px;
+        height: 28px;
+    }
+}

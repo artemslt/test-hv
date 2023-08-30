@@ -1,0 +1,17 @@
+@import "../../../../styles/mixins";
+
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px 14px;
+    height: 140px;
+    padding-bottom: 28px;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 16px;
+        height: 102px;
+        padding-bottom: 40px;
+    }
+}

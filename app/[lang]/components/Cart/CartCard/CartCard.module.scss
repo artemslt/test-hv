@@ -1,0 +1,109 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 304px;
+    height: 134px;
+    @include tablet {
+        width: 470px;
+        height: 186px;
+    }
+    @include desktop {
+        width: 484px;
+        height: 186px;
+        padding: 16px;
+    }
+}
+
+.thumb {
+    position: relative;
+    width: 134px;
+    height: 134px;
+    margin-right: 16px;
+    background-color: $color-imgThumb;
+    border-radius: 5px;
+    @include tablet {
+        width: 186px;
+        height: 186px;
+    }
+    @include desktop {
+        width: 154px;
+        height: 154px;
+    }
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 124px;
+    margin-right: 6px;
+    @include tablet {
+        width: 212px;
+        margin-right: 16px;
+    }
+    @include desktop {
+        width: 232px;
+        margin-right: 18px;
+    }
+}
+
+.name {
+    height: 52px;
+    margin-bottom: 11px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include tablet {
+        height: 48px;
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 20px;
+        -webkit-line-clamp: 2;
+    }
+    @include desktop {
+        height: 44px;
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.characteristics {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.25;
+    &:last-of-type {
+        margin-bottom: 5px;
+    }
+    @include tablet {
+        height: 19px;
+        &:last-of-type {
+            margin-bottom: 16px;
+        }
+        font-size: 16px;
+    }
+}
+
+.values {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.25;
+    @include tablet {
+        font-size: 16px;
+    }
+}

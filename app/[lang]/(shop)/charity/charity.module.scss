@@ -1,0 +1,53 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+    @include tablet {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+}
+.wrapper__desktop {
+    @include desktop {
+        display: flex;
+        gap: 69px;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+}
+
+.about__us {
+    display: none;
+    @include tablet {
+        display: block;
+        width: 290px;
+        line-height: 1.25;
+    }
+
+    @include desktop {
+        display: none;
+    }
+}
+.charity__imgThumb {
+    margin-bottom: 26px;
+    width: 304px;
+    height: 256px;
+    background-color: $color-imgThumb;
+    background-image: url(../../../../public/images/Charity_photo.jpg);
+    background-size: contain;
+    border-radius: 5px;
+
+    @include tablet {
+        min-width: 344px;
+        height: 290px;
+        background-image: url(../../../../public/images/Charity_photo_tablet.png);
+    }
+
+    @include desktop {
+        margin: 0;
+        min-width: 448px;
+        height: 409px;
+        background-image: url(../../../../public/images/Charity_photo_pc.png);
+    }
+}

@@ -1,0 +1,92 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles//mixins";
+.header {
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+.menu {
+    display: flex;
+    background-color: $color-white;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+.navigation {
+    padding: 9px 0;
+    background-color: $color-black;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1280px;
+}
+
+.pageLinks {
+    display: flex;
+    align-items: center;
+    width: 540px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+    @include desktop {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.socialLinks {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 88px;
+    margin-right: 52px;
+    fill: $color-black;
+    transition: fill $transition;
+    &:hover,
+    &:focus {
+        fill: $color-orange;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.14;
+    letter-spacing: -0.05em;
+    @include desktop {
+        margin-right: 32px;
+    }
+}
+.logo__icon {
+    width: 40px;
+    height: 50px;
+
+    @include tablet {
+        width: 56px;
+        height: 70px;
+    }
+    @include desktop {
+        width: 56px;
+        height: 70px;
+    }
+}
+
+.search {
+    position: relative;
+    margin: 0 22px;
+}

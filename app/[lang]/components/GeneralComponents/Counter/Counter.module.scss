@@ -1,0 +1,97 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 32px;
+    @include tablet {
+        width: 140px;
+        height: 48px;
+    }
+    @include desktop {
+        width: 124px;
+        height: 40px;
+    }
+}
+.button {
+    &:not([disabled]) {
+        cursor: pointer;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+    border: 1px solid $color-grey;
+    &:first-of-type {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    &:last-of-type {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    background-color: $color-white;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    transition: background-color $transition;
+    @include tablet {
+        width: 48px;
+        height: 48px;
+        padding: 4px;
+        border: 2px solid $color-grey;
+    }
+    @include desktop {
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+        &:hover,
+        &:focus-visible {
+            background-color: $color-light-grey;
+        }
+    }
+    &:disabled {
+        color: $color-light-grey;
+        background-color: $color-white;
+    }
+}
+.input {
+    width: 42px;
+    height: 100%;
+    border: none;
+    border-radius: 0%;
+    border-top: 1px solid $color-grey;
+    border-bottom: 1px solid $color-grey;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    &:focus {
+        outline: none;
+    }
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /* Firefox */
+    &[type="number"] {
+        appearance: inherit;
+        -moz-appearance: textfield;
+    }
+    @include tablet {
+        width: 48px;
+        border-top: 2px solid $color-grey;
+        border-bottom: 2px solid $color-grey;
+        font-size: 20px;
+    }
+    @include desktop {
+        width: 40px;
+    }
+}

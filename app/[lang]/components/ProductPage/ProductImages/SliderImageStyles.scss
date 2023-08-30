@@ -1,0 +1,122 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.image-slider {
+    & .slick-track {
+        width: 304px;
+        height: 288px;
+
+        @include tablet {
+            width: 354px;
+            height: 344px;
+        }
+    }
+
+    & .slick-list {
+        width: 304px;
+        @include tablet {
+            width: 354px;
+            margin-left: -5px;
+            margin-top: -20px;
+        }
+    }
+
+    & .slick-slide {
+        @include tablet {
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
+
+    // arrows styles
+
+    & .slick-arrow {
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include desktop {
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            &:hover,
+            &:focus-visible {
+                background-color: $color-light-grey;
+            }
+        }
+    }
+
+    & .slick-next {
+        @include tablet {
+            position: relative;
+            right: -324px;
+            bottom: -56px;
+            display: block;
+            background-image: url(../../../../../public/images/common/ArrowNext.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @include desktop {
+            bottom: -66px;
+        }
+    }
+
+    & .slick-prev {
+        @include tablet {
+            position: relative;
+            left: -3px;
+            bottom: -400px;
+            display: block;
+            background-image: url(../../../../../public/images/common/ArrowPrev.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @include desktop {
+            bottom: -420px;
+            left: -7px;
+        }
+    }
+
+    // custom dots styles
+    & .slick-active {
+        @include tablet {
+            width: 364px;
+            height: 344px;
+        }
+    }
+
+    & .slick-dots {
+        height: 10px;
+        bottom: -20px;
+
+        @include tablet {
+            height: 80px;
+            width: 272px;
+            bottom: -76px;
+            right: 36px;
+        }
+    }
+
+    & .slick-dots li {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-grey);
+        border-radius: 50%;
+        @include tablet {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+        }
+    }
+
+    & .slick-dots li.slick-active {
+        background-color: var(--color-orange);
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.noProducts {
+    margin-top: 20px;
+    @include desktop {
+        margin-top: 80px;
+    }
+}
+.filters__wrapper {
+    margin: 0 auto;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 790px;
+        height: 48px;
+        margin-bottom: 56px;
+    }
+}

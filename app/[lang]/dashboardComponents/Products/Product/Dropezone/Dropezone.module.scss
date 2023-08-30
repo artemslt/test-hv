@@ -1,0 +1,65 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.dropzone {
+    width: 304px;
+    height: 112px;
+    outline: none;
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: none;
+    line-height: 1.21;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $font;
+    resize: none;
+    @include desktop {
+        width: 728px;
+        height: 261px;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $color-black;
+        color: $color-black;
+    }
+    &::placeholder {
+        color: $color-grey;
+    }
+}
+
+.dropzone__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dropzone__thumb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aaa8a4;
+
+    @include desktop {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.dropzone__add_icon {
+    width: 32px;
+    height: 32px;
+    @include desktop {
+        width: 54px;
+        height: 54px;
+    }
+}

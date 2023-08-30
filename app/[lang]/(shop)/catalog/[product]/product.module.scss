@@ -1,0 +1,40 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.title__wrapper {
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }
+}
+.product__title {
+    text-align: left;
+    @include tablet {
+        text-align: center;
+        max-width: 500px;
+    }
+
+    @include desktop {
+        max-width: 700px;
+    }
+}
+
+.product__button {
+    height: 44px;
+    margin-top: 0;
+
+    @include tablet {
+        width: 344px;
+        height: 56px;
+        font-size: 20px;
+    }
+}
+
+.wrapper {
+    @include tablet {
+        display: flex;
+        gap: 32px;
+    }
+    @include desktop {
+        gap: 80px;
+    }
+}

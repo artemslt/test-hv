@@ -1,0 +1,11 @@
+@import "../../../../styles/mixins";
+
+.loader {
+    margin: 100px auto;
+    @include tablet {
+        margin: 120px auto;
+    }
+    @include desktop {
+        margin: 140px auto;
+    }
+}

@@ -1,0 +1,87 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.card {
+    width: 146px;
+    height: 235px;
+    padding: 14px;
+    border: 2px solid $color-orange;
+    border-radius: 8px;
+    background-color: $color-white;
+    @include tablet {
+        width: 156px;
+        height: 253px;
+    }
+    @include desktop {
+        width: 268px;
+        height: 380px;
+        padding: 22px;
+        border-radius: 16px;
+    }
+}
+.thumb {
+    position: relative;
+    width: 114px;
+    height: 114px;
+    margin-bottom: 12px;
+    background-color: $color-imgThumb;
+    border-radius: 5px;
+    @include tablet {
+        width: 124px;
+        height: 124px;
+    }
+    @include desktop {
+        border-radius: 8px;
+        width: 220px;
+        height: 220px;
+        margin-bottom: 20px;
+    }
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 5px;
+    @include desktop {
+        border-radius: 8px;
+    }
+}
+.name {
+    height: 37px;
+    font-weight: 500;
+    font-size: 14px;
+    @include tablet {
+        font-size: 16px;
+    }
+    @include desktop {
+        height: 24px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+.socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    @include tablet {
+        margin-top: 24px;
+    }
+    @include desktop {
+        margin-top: 40px;
+    }
+}
+.link__icon {
+    cursor: pointer;
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: $color-grey;
+    transition: color $transition;
+    @include desktop {
+        width: 28px;
+        height: 28px;
+        &:hover,
+        &:focus-visible {
+            color: $color-black;
+        }
+    }
+}

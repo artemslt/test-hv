@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+    @include tablet {
+        gap: 39px;
+        flex-direction: row-reverse;
+        display: flex;
+    }
+    @include desktop {
+        gap: 117px;
+    }
+}
+
+.form__wrapper {
+    @include desktop {
+        padding: 40px;
+        border: 2px solid $color-light-grey;
+        border-radius: 16px;
+    }
+}

@@ -1,0 +1,21 @@
+@import "../../../../styles/mixins";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    @include desktop {
+        width: 394px;
+        margin: 0;
+    }
+}
+.text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.23;
+    @include desktop {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.title {
+    margin-bottom: 20px;
+    @include tablet {
+        margin-bottom: 40px;
+    }
+}
+.wrapper {
+    width: 219px;
+    margin-top: 34px;
+    @include tablet {
+        width: 320px;
+        margin-top: 72px;
+    }
+}

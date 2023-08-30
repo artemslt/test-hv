@@ -1,0 +1,128 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 146px;
+    height: 288px;
+    @include tablet {
+        width: 218px;
+        height: 412px;
+    }
+    @include desktop {
+        width: 232px;
+        height: 420px;
+        padding: 16px;
+    }
+}
+.thumb {
+    position: relative;
+    width: 146px;
+    height: 128px;
+    margin-bottom: 12px;
+    background-color: $color-imgThumb;
+    border-radius: 5px;
+    @include tablet {
+        width: 218px;
+        height: 218px;
+        margin-bottom: 16px;
+    }
+    @include desktop {
+        border-radius: 8px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 12px;
+    }
+}
+
+.new {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-red;
+    font-size: 13px;
+    @include tablet {
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    @include desktop {
+        padding: 2px 8px;
+        font-size: 18px;
+    }
+}
+.image {
+    object-fit: cover;
+    border-radius: 5px;
+    @include desktop {
+        border-radius: 8px;
+    }
+}
+.description {
+    width: 100%;
+    padding: 0 4px;
+    @include tablet {
+        padding: 0;
+    }
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.name {
+    width: 138px;
+    height: 57px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include tablet {
+        width: 218px;
+        height: 48px;
+        margin-bottom: 32px;
+        font-size: 20px;
+        -webkit-line-clamp: 2;
+    }
+    @include desktop {
+        width: 200px;
+        height: 66px;
+        margin-bottom: 6px;
+        font-weight: 500;
+        font-size: 18px;
+        -webkit-line-clamp: 3;
+    }
+}
+.characteristics {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.25;
+    &:not(:last-of-type) {
+        margin-bottom: 4px;
+    }
+
+    @include tablet {
+        font-size: 14px;
+    }
+}
+.values {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.25;
+    @include tablet {
+        font-size: 14px;
+    }
+}

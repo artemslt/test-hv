@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.charity__title {
+    text-align: left;
+
+    @include tablet {
+        text-align: center;
+    }
+}
+
+.noActiveBankInfo {
+    margin-top: 56px;
+    text-align: center;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.21;
+    color: $color-grey;
+
+    @include tablet {
+        font-size: 20px;
+    }
+
+    @include desktop {
+        font-size: 24px;
+    }
+}

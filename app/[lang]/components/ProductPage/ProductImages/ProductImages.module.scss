@@ -1,0 +1,40 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.slider__image {
+    position: relative;
+
+    width: 304px;
+    height: 288px;
+    object-fit: cover;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    @include tablet {
+        width: 344px;
+        height: 344px;
+    }
+}
+
+.slider__wrapper {
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 5px;
+
+    @include tablet {
+        width: 344px;
+        margin-bottom: 0px;
+    }
+}
+
+.custom__dots {
+    font-size: 1px;
+    opacity: 0;
+}
+
+.custom__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}

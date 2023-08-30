@@ -1,0 +1,30 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.button__wrapper {
+    width: 219px;
+    margin-top: 44px;
+    @include tablet {
+        width: 320px;
+        margin-top: 125px;
+    }
+}
+.button_cancel {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid $color-black;
+    transition: border $transition;
+    @include desktop {
+        margin-top: 36px;
+        border-bottom: 2px solid transparent;
+        font-size: 20px;
+        &:hover,
+        &:focus-visible {
+            border-bottom: 2px solid $color-orange;
+        }
+    }
+}

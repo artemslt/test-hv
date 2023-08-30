@@ -1,0 +1,63 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 51px;
+    &:not(:last-of-type) {
+        border-bottom: 1px solid $color-grey;
+    }
+    @include desktop {
+        height: 56px;
+        &:not(:last-of-type) {
+            border-bottom: 2px solid $color-light-grey;
+        }
+    }
+}
+.status {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    margin-left: 16px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -16px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    @include desktop {
+        width: 130px;
+        margin-left: 20px;
+        &::before {
+            left: -20px;
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.status_blue {
+    &::before {
+        background-color: $color-blue;
+    }
+}
+.status_orange {
+    &::before {
+        background-color: $color-orange;
+    }
+}
+.status_green {
+    &::before {
+        background-color: $color-green;
+    }
+}
+.status_red {
+    &::before {
+        background-color: $color-red;
+    }
+}

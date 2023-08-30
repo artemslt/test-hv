@@ -1,0 +1,149 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+
+.overlay {
+    visibility: hidden;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2;
+    background: $color-backdrop;
+    transition: visibility $transition;
+    &.isOpen {
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+.menu {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    padding: 20px 16px 20px 8px;
+    background-color: $color-white;
+    transition: transform $transition;
+    transform: translateX(-100%);
+
+    &.isShow {
+        transform: translateX(0);
+        overflow-y: auto;
+    }
+    &.isClose {
+        transform: translateX(-100%);
+    }
+
+    @include tablet {
+        width: 368px;
+        padding: 30px 24px;
+    }
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    @include tablet {
+        margin-bottom: 40px;
+    }
+}
+.menu__close {
+    width: 28px;
+    height: 28px;
+    stroke: $color-grey;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+}
+.menu__icon {
+    width: 24px;
+    height: 24px;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+    @include desktop {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.menu__item__bolt {
+    display: flex;
+    align-items: center;
+    color: $color-black;
+    &:nth-child(1) {
+        margin-bottom: 28px;
+        @include tablet {
+            margin-bottom: 24px;
+        }
+    }
+    &:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    &:nth-child(7) {
+        margin-bottom: 28px;
+        @include tablet {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.inactiveLink {
+    color: $color-black;
+    transition: color $transition;
+    &:hover,
+    &:focus {
+        color: $color-orange;
+    }
+}
+.activeLink {
+    color: $color-orange;
+}
+.menu__text {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    @include tablet {
+        font-size: 20px;
+    }
+}
+.menu__call {
+    margin-bottom: 16px;
+    @include tablet {
+        margin-bottom: 20px;
+    }
+}
+
+.menu__btn {
+    cursor: pointer;
+    margin-left: 32px;
+    width: 162px;
+    padding: 10px;
+    border: 1px solid $color-black;
+    border-radius: 3px;
+    background-color: $color-white;
+    transition: background-color $transition;
+    &:hover,
+    &:focus {
+        background-color: $color-light-grey;
+    }
+    @include tablet {
+        margin-left: 48px;
+        width: 201px;
+        padding: 12px;
+        border: 2px solid $color-black;
+        font-size: 20px;
+    }
+}

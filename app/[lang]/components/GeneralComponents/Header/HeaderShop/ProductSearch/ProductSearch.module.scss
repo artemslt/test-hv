@@ -1,0 +1,64 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+
+.window__popup {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-white;
+    transition: transform $transition;
+    transform: translateY(-100%);
+    transform-origin: bottom center;
+    &.isShow {
+        transform: translateY(0);
+    }
+    &.isClose {
+        transform: translateY(-100%);
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    padding: 28px 8px;
+    border-bottom: 1px solid $color-grey;
+}
+
+.search__icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 16px;
+    margin-right: 24px;
+    fill: $color-grey;
+    @include tablet {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.search__form {
+    display: flex;
+    width: 100%;
+}
+
+.search__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: $color-black;
+    background-color: none;
+    @include tablet {
+        font-size: 18px;
+    }
+}
+
+.search__close {
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}

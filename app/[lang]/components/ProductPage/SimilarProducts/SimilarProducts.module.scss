@@ -1,0 +1,10 @@
+@import "../../../../styles/mixins";
+
+.similarProducts__slider {
+    width: 344px;
+    height: 288px;
+    @include tablet {
+        width: 720px;
+        height: 413px;
+    }
+}

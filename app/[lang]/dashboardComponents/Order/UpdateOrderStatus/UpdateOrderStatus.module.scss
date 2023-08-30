@@ -1,0 +1,16 @@
+@import "../../../../styles/mixins";
+
+.wrapper {
+    margin-bottom: 55px;
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+.text {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    @include desktop {
+        font-size: 18px;
+    }
+}

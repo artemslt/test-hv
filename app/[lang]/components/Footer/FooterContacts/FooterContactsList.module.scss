@@ -1,0 +1,72 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.contacts__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    @include tablet {
+        margin: 0 54px 0 48px;
+        font-size: 20px;
+        align-items: start;
+    }
+    @include desktop {
+        margin: 0 125px 0 106px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.contacts__item {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    text-decoration: none;
+    gap: 8px;
+    transition: color $transition;
+
+    @include desktop {
+        padding: 8px;
+        &:hover,
+        &:focus {
+            color: $color-orange;
+            .icon__wrapper {
+                color: $color-orange;
+            }
+        }
+    }
+}
+
+.icon__wrapper {
+    width: 24px;
+    height: 24px;
+    color: $color-orange;
+    @include tablet {
+        width: 28px;
+        height: 28px;
+    }
+    @include desktop {
+        width: 24px;
+        height: 24px;
+        color: $color-white;
+        transition: color $transition;
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    @include tablet {
+        width: 28px;
+        height: 28px;
+    }
+    @include desktop {
+        width: 24px;
+        height: 24px;
+    }
+}

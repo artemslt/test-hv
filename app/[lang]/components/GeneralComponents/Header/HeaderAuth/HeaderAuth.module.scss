@@ -1,0 +1,28 @@
+@import "../../../../../styles/variables";
+.header {
+    padding-top: 3px;
+    padding-bottom: 6px;
+    background-color: $color-black;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__text {
+    margin-top: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $color-white;
+}

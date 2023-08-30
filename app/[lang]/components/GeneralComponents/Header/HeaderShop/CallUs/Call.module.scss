@@ -1,0 +1,47 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+
+.call {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: $color-black;
+    transition: color $transition;
+    &:hover,
+    &:focus-visible {
+        color: $color-orange;
+    }
+    @include tablet {
+        margin-bottom: 20px;
+    }
+    @include desktop {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+    @include desktop {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.text {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    @include tablet {
+        font-size: 20px;
+    }
+    @include desktop {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,53 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+
+.linkPage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    @include tablet {
+        margin-bottom: 24px;
+    }
+    @include desktop {
+        margin-bottom: 0;
+        margin-right: 16px;
+        padding: 8px;
+    }
+}
+.inactiveLink {
+    color: $color-black;
+    transition: color $transition;
+    &:hover,
+    &:focus {
+        color: $color-orange;
+    }
+}
+.activeLink {
+    color: $color-orange;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+    @include desktop {
+        width: 24px;
+        height: 24px;
+    }
+}
+.menu__text {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    @include tablet {
+        font-size: 20px;
+    }
+    @include desktop {
+        font-size: 18px;
+    }
+}

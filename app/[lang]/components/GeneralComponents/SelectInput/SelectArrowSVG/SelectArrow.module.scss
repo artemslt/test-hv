@@ -1,0 +1,9 @@
+@import "../../../../../styles/variables";
+
+.select__img {
+    fill: $color-grey;
+}
+.select__imgRotated {
+    fill: $color-black;
+    transform: rotate(180deg);
+}

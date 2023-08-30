@@ -1,0 +1,96 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.modal-slider {
+    & .slick-track {
+        @include tablet {
+            width: 730px;
+            height: 720px;
+        }
+        @include desktop {
+            width: 606px;
+            height: 596px;
+        }
+    }
+
+    & .slick-list {
+        @include tablet {
+            width: 720px;
+        }
+        @include desktop {
+            width: 596px;
+            margin-top: -30px;
+        }
+    }
+
+    // arrows styles
+
+    & .slick-arrow {
+        @include desktop {
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px;
+            width: 52px;
+            height: 52px;
+            border-radius: 4px;
+            background-color: $color-light-grey;
+            &:hover,
+            &:focus-visible {
+                background-color: $color-grey;
+            }
+        }
+    }
+
+    & .slick-next {
+        @include desktop {
+            position: relative;
+            right: -854px;
+            bottom: 309px;
+            display: block;
+            background-image: url(../../../../../public/images/common/ArrowNext.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    & .slick-prev {
+        @include desktop {
+            position: relative;
+            left: -258px;
+            bottom: -310px;
+            display: block;
+            background-image: url(../../../../../public/images/common/ArrowPrev.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    & .slick-dots {
+        @include tablet {
+            height: 10px;
+            bottom: -41px;
+        }
+
+        @include desktop {
+            bottom: 14px;
+        }
+    }
+
+    & .slick-dots li {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-grey);
+        border-radius: 50%;
+    }
+
+    & .slick-dots li.slick-active {
+        background-color: var(--color-orange);
+    }
+}

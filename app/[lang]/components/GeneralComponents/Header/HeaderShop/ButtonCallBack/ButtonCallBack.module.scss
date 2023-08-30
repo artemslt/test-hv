@@ -1,0 +1,33 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixins";
+
+.btn {
+    cursor: pointer;
+    width: 162px;
+    margin-left: 32px;
+    padding: 10px;
+    border: 1px solid $color-black;
+    border-radius: 3px;
+    background-color: $color-white;
+    transition: background-color $transition;
+    &:hover,
+    &:focus {
+        background-color: $color-light-grey;
+    }
+    @include tablet {
+        width: 201px;
+        margin-left: 48px;
+        padding: 12px;
+        border: 2px solid $color-black;
+        font-size: 20px;
+    }
+    @include desktop {
+        width: 184px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

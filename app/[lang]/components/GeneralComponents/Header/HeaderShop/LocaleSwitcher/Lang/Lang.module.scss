@@ -1,0 +1,24 @@
+@import "../../../../../../../styles/variables";
+@import "../../../../../../../styles/mixins";
+
+.item__lang {
+    cursor: pointer;
+
+    margin-left: 24px;
+
+    @include tablet {
+        margin-left: 32px;
+    }
+}
+
+.activeLang {
+    color: $color-black;
+}
+
+.whiteActiveLang {
+    color: $color-white;
+}
+
+.inactiveLang {
+    color: $color-grey;
+}

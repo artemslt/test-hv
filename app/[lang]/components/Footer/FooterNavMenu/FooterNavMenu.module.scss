@@ -1,0 +1,36 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.wrapper {
+    display: none;
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-left: 99px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.navLink {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+    color: $color-white;
+    transition: color $transition;
+
+    &:hover,
+    &:focus-visible {
+        color: $color-orange;
+    }
+}
+
+.icon {
+    
+    @include desktop {
+        width: 24px;
+        height: 24px;
+    }
+}

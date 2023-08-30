@@ -1,0 +1,25 @@
+@import "../../../../styles/mixins";
+
+.form {
+    position: relative;
+}
+.label {
+    position: relative;
+    margin-top: 20px;
+    @include desktop {
+        margin-top: 28px;
+    }
+}
+.input {
+    padding-right: 42px;
+    @include tablet {
+        padding-right: 46px;
+    }
+}
+.button {
+    height: 44px;
+    margin-top: 37px;
+    @include desktop {
+        height: 56px;
+    }
+}

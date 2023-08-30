@@ -1,0 +1,91 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.banner {
+    position: sticky;
+    bottom: 0;
+
+    border-top: 1px solid #aaa8a4;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    display: grid;
+    gap: 16px;
+    padding: 16px 8px;
+    @include tablet {
+        gap: 20px;
+        padding: 24px 25px;
+    }
+
+    @include desktop {
+        grid-template-columns: auto auto;
+        gap: 32px;
+        padding: 24px 32px;
+    }
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.25;
+    color: $color-black;
+    @include tablet {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 1.23;
+    }
+
+    &__accent {
+        font-weight: 700;
+        color: $color-orange;
+    }
+}
+
+.button {
+    width: 146px;
+    height: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: auto;
+    border-color: transparent;
+    border-radius: 3px;
+    background-color: $color-orange;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.23;
+
+    text-align: center;
+
+    cursor: pointer;
+    transition: color $transition, background-color $transition;
+
+    @include tablet {
+        width: 220px;
+        height: 43px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 5px;
+        font-size: 16px;
+
+        line-height: 1.2;
+    }
+
+    @include desktop {
+        height: 48px;
+        border-radius: 6px;
+        font-size: 18px;
+        line-height: 1.23px;
+
+        &:hover,
+        &:focus-visible {
+            color: $color-white;
+            background-color: $color-black;
+        }
+    }
+}
