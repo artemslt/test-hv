@@ -9,6 +9,7 @@ import ProductCardsSlider from "./components/GeneralComponents/ProductCardsSlide
 import Loader from "./components/GeneralComponents/Loader/Loader";
 import styles from "./page.module.scss";
 import "./components/GeneralComponents/ProductCardsSlider/Slider.scss";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
     const lang = useLang();
@@ -16,6 +17,10 @@ const HomePage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [newProducts, setNewProducts] = useState(null);
     const [isNotificationShown, setIsNotificationShown] = useState(false);
+
+    const { locale } = useRouter();
+
+    console.log("locale :>> ", locale);
 
     useEffect(() => {
         const products = async lang => {
