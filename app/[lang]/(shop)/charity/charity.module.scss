@@ -25,9 +25,9 @@
         line-height: 1.25;
     }
 
-    @include desktop {
-        display: none;
-    }
+    // @include desktop {
+    //     display: none;
+    // }
 }
 .charity__imgThumb {
     margin-bottom: 26px;
